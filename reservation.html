@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css_main.css">
+    <style>
+        #h1 {
+            color: #eaedf1;
+            margin-top: 60px;
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        #hhh2 {
+            color: #eaedf1;
+        }
+        body {
+            background-color: rgb(72, 73, 87);
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .footer-logo img {
+            width: 100px;
+            height: auto;
+        }
+        .footer-info {
+            text-align: right;
+            position: relative;
+            right: 420px;
+        }
+        .footer-info p {
+            margin: 5px 0;
+            text-align: left;
+        }
+        .footer-info a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .footer-social {
+            font-size: 24px;
+        }
+        .footer-social a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 5px;
+        }
+        #logo1 {
+            border-radius: 30px;
+            position: relative;
+            right: 100px;
+            align-items: center;
+        }
+        #footer-info {
+            right: 50px;
+            text-align: center;
+        }
+        #footer-info-1 {
+            padding-left: 40px;
+        }
+        .copyright-text {
+            padding-left: 5px;
+        }
+    </style>
+    <head></head>
+<body>
+    <div>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark" aria-label="Third navbar example">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">M&M</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+        
+              <div class="collapse navbar-collapse" id="navbarsExample03">
+                <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="Main.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="menu.html">Menu</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="reservation.html">Reservation</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+    </div>
+    <br>
+
+    <h1 id="h1">M&M Food Company</h1>
+
+    <div class="container mt-5">
+        <h2 id="hhh2" class="mb-4" style="text-align: left;">Make a Reservation</h2>
+        <form id="reservationForm">
+            <div class="form-group">
+                <label style="color: #eaedf1;" for="name">Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label style="color: #eaedf1;" for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label style="color: #eaedf1;" for="phone">Phone Number:</label>
+                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="form-group">
+                <label style="color: #eaedf1;" for="date">Reservation Date:</label>
+                <input type="date" class="form-control" id="date" required>
+            </div>
+            <div class="form-group">
+                <label style="color: #eaedf1;" for="time">Reservation Time:</label>
+                <input type="time" class="form-control" id="time" required>
+            </div>
+            <div class="form-group">
+                <label style="color: #eaedf1;" for="guests">Number of Guests:</label>
+                <select class="form-control" id="guests" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label style="color: #eaedf1;" for="specialRequests">Special Requests:</label>
+                <textarea class="form-control" id="specialRequests" rows="4" placeholder="Any special requests or dietary restrictions?"></textarea>
+            </div>
+            <button style="margin-top: 10px;" type="submit" class="btn btn-primary">Submit Reservation</button>
+        </form>
+    </div>
+    <hr>
+
+    <!-- Include Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById("reservationForm");
+
+            form.addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                const name = form.querySelector("#name").value;
+                const email = form.querySelector("#email").value;
+                const phone = form.querySelector("#phone").value;
+                const date = form.querySelector("#date").value;
+                const time = form.querySelector("#time").value;
+                const guests = form.querySelector("#guests").value;
+                const specialRequests = form.querySelector("#specialRequests").value;
+
+                // Display the form data
+                const output = `
+                    Name: ${name}
+                    Email: ${email}
+                    Phone: ${phone}
+                    Date: ${date}
+                    Time: ${time}
+                    Guests: ${guests}
+                    Special Requests: ${specialRequests}
+                `;
+                alert(output);
+            });
+        });
+    </script>
+
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img id="logo1" src="Logo.png" alt="M&M Company">
+            </div>
+            <div id="footer-info">
+                <p>Phone: +44 8844 516 239</p>
+                <p>Email: M_M1979company@gmail.com</p>
+                <p>Address: University Academy 92, Old Trafford, Manchester, United Kingdom, M16 0PQ</p>
+            </div>
+            <div>
+                <p id="opn1" style="text-align: center;"> 
+                    Opening Hours<br><br>
+                    Monday - Friday: 9:00 AM - 6:00 PM<br>
+                    Saturday: 10:00 AM - 4:00 PM<br>
+                    Sunday: Closed
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

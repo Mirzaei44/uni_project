@@ -1,0 +1,83 @@
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(72, 73, 87);;
+}
+
+header {
+    background-color: rgb(72, 73, 87);;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background-color: #e8eef1;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 10px 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(105, 124, 136);
+}
+
+.menu-section {
+    background-color: rgb(227, 234, 238);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item {
+    margin: 20px 0;
+}
+
+.price {
+    font-weight: bold;
+    color: #9d83a1;
+}
+#p1 {
+    color: aliceblue;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 17px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#h1 {
+    color: rgb(239, 238, 247);
+}
+
+
+footer {
+    background-color: rgb(72, 73, 87);;
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+.copyright-text {
+    padding-left: 5px;
+}
+
+#i1 {
+    width: 130px;
+    height: 130px;
+    
+}
+.copyright-text {
+    padding-left: 5px;
+}
